@@ -11,7 +11,7 @@ App will:
    - respective todo task list item 'Remove' anchor link
 
 ## Current Implementations
-[vite](https://vitejs.dev/) is used as the main bundler.
+[vite](https://vitejs.dev/) is used in all implementation as the frontend bundler.
 
 - Typescript
 
