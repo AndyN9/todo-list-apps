@@ -11,13 +11,14 @@ App will:
    - respective todo task list item 'Remove' anchor link
 
 ## Current Implementations
-[vite](https://vitejs.dev/) is used in all implementation as the frontend bundler.
+[Vite](https://vitejs.dev/) is used in all implementation as the frontend bundler.
 
 - Vanilla
 - Typescript
 - React
 
 ### Planned Implementations
-[vitest](https://vitest.dev/) is planned as the unit test framework.
+[Vitest](https://vitest.dev/) is planned as the unit test framework.
+[Playwright](https://playwright.dev/) is planned as e2e test framework.
 
 - React & Typescript
