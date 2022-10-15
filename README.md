@@ -18,7 +18,6 @@ App will:
 - React
 
 ### Planned Implementations
-[Vitest](https://vitest.dev/) is planned as the unit test framework.
-[Playwright](https://playwright.dev/) is planned as e2e test framework.
+[Vitest](https://vitest.dev/) and [Playwright](https://playwright.dev/) is planned to be used as the  test frameworks.
 
 - React & Typescript
