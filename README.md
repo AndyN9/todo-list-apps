@@ -17,6 +17,20 @@ App will:
 - Typescript
 - React
 
+### Installation
+```
+// change directory to an implementation
+cd [implementation]
+
+// local development
+npm install
+npm run dev
+
+// local build and preview
+npm run build
+npm run preview
+```
+
 ### Planned Implementations
 [Vitest](https://vitest.dev/) and [Playwright](https://playwright.dev/) is planned to be used as the  test frameworks.
 
