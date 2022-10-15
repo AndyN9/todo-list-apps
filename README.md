@@ -13,10 +13,11 @@ App will:
 ## Current Implementations
 [vite](https://vitejs.dev/) is used in all implementation as the frontend bundler.
 
+- Vanilla
 - Typescript
+- React
 
 ### Planned Implementations
+[vitest](https://vitest.dev/) is planned as the unit test framework.
 
-- Vanilla
-- React
-- React Typescript
+- React & Typescript
