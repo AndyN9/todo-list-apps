@@ -35,3 +35,6 @@ npm run preview
 [Vitest](https://vitest.dev/) and [Playwright](https://playwright.dev/) is planned to be used as the  test frameworks.
 
 - React & Typescript
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
