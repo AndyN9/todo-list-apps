@@ -1,5 +1,5 @@
 # todo-list-apps
-Sooo many todos; yet sooo little time. A collection of the same todo list app re-created using different technologies (JavaScript frameworks). Inspired by [TodoMVC](https://todomvc.com/).
+Sooo many todos; yet sooo little time. A collection of the same todo list app re-created using different technologies (JavaScript frameworks). Inspired by [Web Dev Simplified](https://www.youtube.com/watch?v=jBmrduvKl5w) and [TodoMVC](https://todomvc.com/).
 
 ## Spec
 App will:
