@@ -16,6 +16,7 @@ App will:
 - Vanilla
 - Typescript
 - React
+- Typescript & React
 
 ### Installation
 ```
@@ -31,10 +32,8 @@ npm run build
 npm run preview
 ```
 
-### Planned Implementations
+### TODOs
 [Vitest](https://vitest.dev/) and [Playwright](https://playwright.dev/) is planned to be used as the  test frameworks.
-
-- React & Typescript
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
