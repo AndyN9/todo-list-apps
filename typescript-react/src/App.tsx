@@ -84,7 +84,7 @@ function App() {
 
   return (
     <>
-      <h1>React Todo List</h1>
+      <h1>Typescript & React Todo List</h1>
       <TodoList tasks={tasks} setTasks={setTasks}/>
       <form id="new-todo-form" onSubmit={handleSubmit}>
         <input type="text" id="new-todo-task" aria-label="Enter in new todo task"/>
