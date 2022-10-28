@@ -30,6 +30,9 @@ npm run dev
 // local build and preview
 npm run build
 npm run preview
+
+// local unit test
+npm run test
 ```
 
 ### TODOs
