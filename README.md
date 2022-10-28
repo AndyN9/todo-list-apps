@@ -33,7 +33,6 @@ npm run preview
 ```
 
 ### TODOs
-- [ ] Add [Vitest](https://vitest.dev/) for unit testing
 - [ ] Add [Playwright](https://playwright.dev/) for e2e testing
 - [ ] Update to mono repo?
 
