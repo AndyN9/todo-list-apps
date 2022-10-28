@@ -5,6 +5,7 @@ import './style.css'
 const list = document.querySelector<HTMLUListElement>('#todo-list');
 const form = document.querySelector<HTMLFormElement>('#new-todo-form');
 const input = document.querySelector<HTMLInputElement>('#new-todo-task');
+export const LOCAL_STORAGE_KEY = 'TASKS';
 
 type Task = {
   id: string;
@@ -32,7 +33,7 @@ form?.addEventListener('submit', event => {
   tasks.push(newTask);
   addListItem(newTask);
   input.value = "";
-  saveTasks();
+  saveTasks(tasks);
 });
 
 function renderList(): void {
@@ -57,7 +58,7 @@ function addListItem(task: Task): void {
 
       return item.id !== task.id;
     });
-    saveTasks();
+    saveTasks(tasks);
     renderList();
   });
 
@@ -65,7 +66,7 @@ function addListItem(task: Task): void {
   checkbox.checked = task.completed;
   checkbox.addEventListener('change', () => {
     task.completed = checkbox.checked;
-    saveTasks();
+    saveTasks(tasks);
   });
 
   label.append(checkbox, task.title);
@@ -73,9 +74,9 @@ function addListItem(task: Task): void {
   list?.append(listItem);
 }
 
-function loadTasks(): Task[] {
-  const taskJson = localStorage.getItem('TASKS');
-  if (taskJson === null) {
+export function loadTasks(): Task[] {
+  const taskJson = localStorage.getItem(LOCAL_STORAGE_KEY);
+  if (taskJson === null || typeof taskJson === 'undefined') {
 
     return [];
   }
@@ -83,6 +84,6 @@ function loadTasks(): Task[] {
   return JSON.parse(taskJson);
 }
 
-function saveTasks(): void {
-  localStorage.setItem('TASKS', JSON.stringify(tasks));
+export function saveTasks(tasks: Task[]): void {
+  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(tasks));
 }

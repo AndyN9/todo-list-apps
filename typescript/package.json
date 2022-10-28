@@ -6,12 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@types/uuid": "^8.3.4",
+    "jsdom": "^20.0.1",
     "typescript": "^4.8.4",
-    "vite": "^3.2.1"
+    "vite": "^3.2.1",
+    "vitest": "^0.24.3"
   },
   "dependencies": {
     "uuid": "^9.0.0"
