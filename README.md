@@ -31,13 +31,20 @@ npm run dev
 npm run build
 npm run preview
 
-// local unit test
+// tests
 npm run test
+
+// e2e tests; change directory to project root
+cd ..
+npm install
+// run all implementation e2e tests
+npm run test
+// run a single implementation e2e
+npm run test:[implementation]
 ```
 
 ### TODOs
 - [ ] Add [Playwright](https://playwright.dev/) for e2e testing
-- [ ] Update to mono repo?
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

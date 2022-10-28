@@ -1,0 +1,24 @@
+{
+  "name": "todo-list-apps",
+  "version": "1.0.0",
+  "description": "A collection of the same todo list app re-created using different technologies (JavaScript frameworks).",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:vanilla && npm run test:typescript && npm run test:react && npm run test:typescript-react",
+    "test:vanilla": "playwright test --config playwright.vanilla.config.ts",
+    "test:typescript": "playwright test --config playwright.typescript.config.ts",
+    "test:react": "playwright test --config playwright.react.config.ts",
+    "test:typescript-react": "playwright test --config playwright.typescript-react.config.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndyN9/todo-list-apps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/AndyN9/todo-list-apps#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.27.1"
+  }
+}
