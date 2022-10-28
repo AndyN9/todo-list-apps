@@ -10,7 +10,6 @@ type Task = {
   id: string;
   title: string;
   completed: boolean;
-  createAt: Date;
 }
 
 let tasks: Task[] = loadTasks();
@@ -28,7 +27,6 @@ form?.addEventListener('submit', event => {
     id: uuidV4(),
     title: input.value,
     completed: false,
-    createAt: new Date(),
   }
 
   tasks.push(newTask);
