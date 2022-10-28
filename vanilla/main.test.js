@@ -20,11 +20,11 @@ describe('app elements', () => {
   it('should match page title & header with app name', () => {
     const appName = 'Vanilla Todo List';
     const titleElement = document.querySelector('title');
-    const headerElement = document.querySelector('h1');
+    const headingElement = document.querySelector('h1');
 
     // innerText returns 'undefined'?
     expect(titleElement.innerHTML).toBe(appName);
-    expect(headerElement.innerHTML).toBe(appName);
+    expect(headingElement.innerHTML).toBe(appName);
   });
 });
 
