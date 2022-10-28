@@ -1,0 +1,42 @@
+// Vitest Snapshot v1
+
+exports[`app elements > should have correct elements 1`] = `
+<div
+  id="app"
+>
+  
+    
+  <h1>
+    Vanilla Todo List
+  </h1>
+  
+    
+  <ul
+    id="todo-list"
+  />
+  
+    
+  <form
+    id="new-todo-form"
+  >
+    
+      
+    <input
+      aria-label="Enter in new todo task"
+      id="new-todo-task"
+      type="text"
+    />
+    
+      
+    <button
+      type="submit"
+    >
+      Add
+    </button>
+    
+    
+  </form>
+  
+  
+</div>
+`;

@@ -5,6 +5,7 @@ import './style.css'
 const list = document.querySelector('#todo-list');
 const form = document.querySelector('#new-todo-form');
 const input = document.querySelector('#new-todo-task');
+export const LOCAL_STORAGE_KEY = 'TASKS';
 
 let tasks = loadTasks();
 renderList();
@@ -26,7 +27,7 @@ form?.addEventListener('submit', event => {
   tasks.push(newTask);
   addListItem(newTask);
   input.value = "";
-  saveTasks();
+  saveTasks(tasks);
 });
 
 function renderList() {
@@ -51,7 +52,7 @@ function addListItem(task) {
 
       return item.id !== task.id;
     });
-    saveTasks();
+    saveTasks(tasks);
     renderList();
   });
 
@@ -59,7 +60,7 @@ function addListItem(task) {
   checkbox.checked = task.completed;
   checkbox.addEventListener('change', () => {
     task.completed = checkbox.checked;
-    saveTasks();
+    saveTasks(tasks);
   });
 
   label.append(checkbox, task.title);
@@ -67,9 +68,9 @@ function addListItem(task) {
   list?.append(listItem);
 }
 
-function loadTasks() {
-  const taskJson = localStorage.getItem('TASKS');
-  if (taskJson === null) {
+export function loadTasks() {
+  const taskJson = localStorage.getItem(LOCAL_STORAGE_KEY);
+  if (taskJson === null || typeof taskJson === 'undefined') {
 
     return [];
   }
@@ -77,6 +78,6 @@ function loadTasks() {
   return JSON.parse(taskJson);
 }
 
-function saveTasks() {
-  localStorage.setItem('TASKS', JSON.stringify(tasks));
+export function saveTasks(tasks) {
+  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(tasks));
 }
