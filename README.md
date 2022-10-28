@@ -33,7 +33,9 @@ npm run preview
 ```
 
 ### TODOs
-[Vitest](https://vitest.dev/) and [Playwright](https://playwright.dev/) is planned to be used as the  test frameworks.
+- [ ] Add [Vitest](https://vitest.dev/) for unit testing
+- [ ] Add [Playwright](https://playwright.dev/) for e2e testing
+- [ ] Update to mono repo?
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
