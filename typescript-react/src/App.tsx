@@ -3,6 +3,24 @@ import { v4 as uuidV4 } from 'uuid';
 
 import './App.css'
 
+export const LOCAL_STORAGE_KEY = 'TASKS';
+
+export const useLocalStorage = (key: string) => {
+  const [value, setValue] = useState(()=> {
+    const json = localStorage.getItem(key);
+    return json === null || typeof json === 'undefined' ? [] : JSON.parse(json);
+  });
+
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(value));
+  } ,[value]);
+
+  return {
+    value,
+    setValue,
+  }
+}
+
 interface Task {
   id: string;
   title: string;
@@ -51,14 +69,7 @@ function TodoList({
 }
 
 function App() {
-  const [tasks, setTasks] = useState<Task[]>(()=> {
-    const taskJson = localStorage.getItem('TASKS');
-    return taskJson !== null ? JSON.parse(taskJson) : [];
-  });
-
-  useEffect(() => {
-    localStorage.setItem('TASKS', JSON.stringify(tasks));
-  } ,[tasks]);
+  const {value: tasks, setValue: setTasks} = useLocalStorage(LOCAL_STORAGE_KEY);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void{
     event.preventDefault();
