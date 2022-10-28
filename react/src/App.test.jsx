@@ -1,6 +1,6 @@
 import React from 'react';
 import { v4 as uuidV4 } from 'uuid';
-import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { cleanup, render, screen, renderHook, act } from '@testing-library/react';
 
 import App, { LOCAL_STORAGE_KEY, useLocalStorage } from './App';
@@ -100,7 +100,7 @@ describe('localStorage functions', () => {
     act(() => {
       result.current.setValue(initialTasks);
     });
-    
+
     expect(result.current.value).toStrictEqual(initialTasks);
   });
 });
