@@ -44,7 +44,7 @@ function TodoList({
 
         return (
           <li key={task.id} >
-            <label htmlFor="">
+            <label>
               <input
                 type="checkbox"
                 checked={task.completed}
