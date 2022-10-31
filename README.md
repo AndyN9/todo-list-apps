@@ -31,13 +31,13 @@ npm run dev
 npm run build
 npm run preview
 
-// tests
+// unit tests
 npm run test
 
 // e2e tests; change directory to project root
 cd ..
 npm install
-// run all implementation e2e tests
+// run all implementation e2e tests (from project root)
 npm run test
 // run a single implementation e2e
 npm run test:[implementation]
