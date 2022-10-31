@@ -37,7 +37,7 @@ test.describe('app', () => {
 
     // persistent todo list via localStorage
     await page.reload({
-      waitUntil: 'networkidle'
+      waitUntil: 'domcontentloaded'
     });
     expect(await getCountOfTodos()).toBe(1);
 
@@ -55,7 +55,7 @@ test.describe('app', () => {
     expect(await getCountOfTodos()).toBe(0);
 
     await page.reload({
-      waitUntil: 'networkidle'
+      waitUntil: 'domcontentloaded'
     });
     expect(await getCountOfTodos()).toBe(0);
   });
