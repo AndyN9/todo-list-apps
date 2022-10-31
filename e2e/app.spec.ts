@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 
+const { IMPLEMENTATION, IMPLEMENTATION_PRETTY } = process.env;
+
 test.beforeEach(async ({ page }) => {
   await page.goto('http://localhost:5173/');
 });
@@ -8,12 +10,15 @@ test.afterEach(async ({ page }) => {
   await page.close();
 });
 
-test.describe('App', () => {
-  // FIXME snapshot not working because of multiple apps testing
-  test.skip('should render correct elements', async ({ page }) => {
-    await expect(page).toHaveTitle(/.*Todo List/);
+test.describe('app', () => {
+  test('should render correct elements', async ({ page }, testInfo) => {
+    const regex = new RegExp(`${IMPLEMENTATION_PRETTY} Todo List`);
+    await expect(page).toHaveTitle(regex);
 
-    expect(await page.screenshot()).toMatchSnapshot();
+    expect(await page.screenshot()).toMatchSnapshot([
+      `${IMPLEMENTATION}`,
+      `${testInfo.title.replaceAll(' ', '-')}.png`,
+    ]);
   });
 
   test('should add, complete, and remove todo tasks', async ({ page }) => {
