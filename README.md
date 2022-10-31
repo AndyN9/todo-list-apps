@@ -43,8 +43,5 @@ npm run test
 npm run test:[implementation]
 ```
 
-### TODOs
-- [ ] Add [Playwright](https://playwright.dev/) for e2e testing
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
