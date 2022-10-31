@@ -10,7 +10,7 @@ afterEach(() => {
 });
 
 describe('app elements', () => {
-  it('should have correct elements', () => {
+  it('should render correct elements', () => {
     const appComponent = render(<App />);
     expect(appComponent).toMatchSnapshot();
   });

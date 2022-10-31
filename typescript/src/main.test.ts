@@ -12,7 +12,7 @@ describe('app elements', () => {
     document.documentElement.innerHTML = html.toString();
   });
 
-  it('should have correct elements', () => {
+  it('should render correct elements', () => {
     const appElement = document.querySelector<HTMLDivElement>('#app');
     expect(appElement).toMatchSnapshot();
   });

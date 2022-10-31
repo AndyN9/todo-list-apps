@@ -1,6 +1,6 @@
 // Vitest Snapshot v1
 
-exports[`app elements > should have correct elements 1`] = `
+exports[`app elements > should render correct elements 1`] = `
 <div
   id="app"
 >
